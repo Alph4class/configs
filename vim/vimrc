@@ -1,0 +1,98 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ======> vim configuration file (.vimrc)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Using vundle as plugin manager
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+"let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
+
+call vundle#end()
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" =====> GENERAL
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" always show current line
+set ruler
+" show line numbers 
+set number
+
+" Lines of history VIM has to remember
+set history=1000
+
+" In many teriminal emulators the mouse works just fine, thus enable it 
+if has('mouse')
+	set mouse=a
+endif
+
+" Ignore case when searching 
+set ignorecase
+
+" Smart searching 
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+" How many tenths of a second to blink when matching brackets
+set mat=2
+
+" autoindenting (begins new line based on the indentation of the last
+set autoindent
+set smartindent
+
+" tab and backspaces are smart" 
+set smarttab
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ====> Colors and Fonts
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax enable
+
+try 
+	colorscheme elflord
+catch
+endtry
+
+set background=dark
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"===> Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs
+set smarttab
+
+" 1 tab == 3 spaces
+set shiftwidth=3
+set tabstop=3
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"====> Spell checking
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pressing ,ss will toggle and untoggle spell checking
+map <leader>ss :setlocal spell!<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"===> Powerline configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
+" Always show statusline
+set laststatus=2
+
+" Use 256 colors
+set t_Co=256
+
