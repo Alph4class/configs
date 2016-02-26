@@ -1,2 +1,2 @@
-# configs
-configuration files for different applications on linux
+# Configuration Scripts
+This repo contains configuration scripts for a number of different linux applications
